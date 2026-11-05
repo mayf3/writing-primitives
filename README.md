@@ -6,6 +6,8 @@
 
 Writing Primitives 不是写作的完整本体（ontology）、自动打分器，也不是必须填满字段的七张表。它是供作者和 AI 编辑按需使用的**轻量编辑中间表示（Writing IR）**和**可回归的修改协议**。其价值取决于最终是否减少误诊、误改、返工，能否保留作者自己的判断与声音；方法自身尚未被实验证明。
 
+**新增的表达层补充**：事实、范围和论证正确，并不自动意味着写得自然、听得顺畅。自然语感不是与事实同级的新对象，而是 U 的媒介适配和 R 的真实回应问题；有依据的表达损害可以成为主问题，纯审美喜好仍保留为可选实验。详见 [Voice & Texture](references/VOICE_TEXTURE.md)，并可按需使用独立 [natural-chinese-voice Skill](skills/natural-chinese-voice/SKILL.md)。
+
 ## 1. 四个核心问题，四种核心对象
 
 | 对象 | 问题 | 保护边界 |
@@ -55,13 +57,15 @@ Writing Primitives 不是写作的完整本体（ontology）、自动打分器�
 ## 4. 入口与文件
 
 - Agent 执行：[SKILL.md](SKILL.md)
+- 按需中文语感/对谈：[references/VOICE_TEXTURE.md](references/VOICE_TEXTURE.md) · [可插拔伴侣 Skill](skills/natural-chinese-voice/SKILL.md)
 - 对象和按需视图：[references/METHOD.md](references/METHOD.md)
 - 局部 patch、回归和停止：[references/REVISION.md](references/REVISION.md)
 - 七原语到 vNext：[references/MIGRATION.md](references/MIGRATION.md)
 - 过往用法的匿名经验：[references/USAGE_AND_LESSONS.md](references/USAGE_AND_LESSONS.md)
 - 经典与论文线索：[references/RESEARCH_SEEDS.md](references/RESEARCH_SEEDS.md)
-- **纯虚构**演示：[examples/SYNTHETIC_REVIEW.md](examples/SYNTHETIC_REVIEW.md)
-- 未运行的评测与案例：[tests/EVALUATION.md](tests/EVALUATION.md)、[tests/CASES.md](tests/CASES.md)
+- **纯虚构**演示：[examples/SYNTHETIC_REVIEW.md](examples/SYNTHETIC_REVIEW.md) · [Voice Pass 对照](examples/voice/SYNTHETIC_VOICE_COMPARISONS.md)
+- 跨模型参考语料的**采集协议，暂无真实 Gemini 输出**：[examples/model-comparison/README.md](examples/model-comparison/README.md) · [三份统一任务](examples/model-comparison/BRIEFS.md)
+- 未运行的评测与案例：[tests/EVALUATION.md](tests/EVALUATION.md)、[tests/CASES.md](tests/CASES.md)、[tests/VOICE_CASES.md](tests/VOICE_CASES.md)
 - 研究任务：[RESEARCH_BRIEF.md](RESEARCH_BRIEF.md)
 - 发布隐私检查：[PUBLICATION_CHECKLIST.md](PUBLICATION_CHECKLIST.md)
 - 变更记录：[CHANGELOG.md](CHANGELOG.md)

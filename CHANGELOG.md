@@ -1,5 +1,13 @@
 # Changelog
 
+## Optional Voice & Texture supplement — 2026-11-05
+
+- 依据跨模型审阅建议，新增 U 的隐式边界承载和 R 的有内容接力检查，**不新增核心原语**。
+- 新增按需 [Voice & Texture](references/VOICE_TEXTURE.md) 和独立 [natural-chinese-voice Skill](skills/natural-chinese-voice/SKILL.md)。
+- 在 SKILL/METHOD/REVISION 增加媒介适配、语义回查、表达回归与停止规则，禁止为“自然”编造故障、经历或硬造分歧。
+- 加入三类原创合成对照稿、十二个未执行 Voice 测试场景和三份跨模型固定任务；**暂无真实 Gemini 生成稿**。
+- Gemini 优势、Voice Pass 改善与读者效果均属待验证问题，不作为已证明的事实。
+
 ## vNext design proposal — 2026-11-05
 
 **Not a stable release; no parser, automated evaluator, or real-reader study is claimed.**
