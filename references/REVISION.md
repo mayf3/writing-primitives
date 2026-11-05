@@ -1,0 +1,95 @@
+# Revision Protocol · 问题优先、锚点修改与回归
+
+本文件是写作原语最重要的操作协议，但 Revision **不是 D/C/U/R 的第五个本体对象**。建议数多，不等于编辑得好。
+
+## 1. Issue first：有证据才改
+
+读取确切稿件版本与作者 D，先恢复 observed，再收集候选问题。建议的问题卡：
+
+~~~yaml
+issue_id: I-01
+base_version: draft-v2
+anchor: U-03
+observed_problem: 把一次观察改成普遍结论
+damage_to_contract: 违反 D 的限定性要求
+evidence:
+  source: 作者提供的试验说明
+  type: factual_scope
+priority:
+  impact: high           # high / medium / low
+  evidence: strong       # strong / partial / speculative
+  change_risk: low
+category: must_fix       # must_fix / optional_experiment / leave_alone
+~~~
+
+按**对作品目标造成的影响、证据可靠性、修改风险**排序。“影响 × 证据”是排序直觉，**不是伪精确数字公式**。默认 **0–3 个主要问题**；其余可以列为候选，不为凑数强迫修改。
+
+- **必修**：违背已确认 D、事实或范围失真、论证/回应缺桥、真实观察显示理解受阻、重复导致功能损失、说话人错位。
+- **可选实验**：两种都符合 D 的叙述顺序、长短、情绪位置与审美偏好；说明各自代价。
+- **保留不动**：已成立的论述、必要铺垫、开放结尾、有辨识度的说法，以及本轮无高影响问题的稿件。
+
+## 2. Patch contract：最小改动并说明可能损失
+
+~~~yaml
+patch_id: P-01
+issue_ref: I-01
+base_version: draft-v2
+anchor:
+  unit_ref: U-03
+  exact_before: 这说明所有参与者都能更快完成。
+operation: replace   # insert / delete / replace / move / split / merge
+candidate_after: 在这次试验里，参与者完成任务的时间更短。
+preservation_guards:
+  - 观察范围只限本次试验
+  - 不更改数据来源与说话人归属
+  - 保留后文的谨慎限定
+expected_gain: 消除普遍化错误
+possible_losses: [句子的确定性和强调力度降低]
+affected_scope: [第3段, 后文两处回指]
+regression_checks:
+  - 后文没有重新宣称普遍有效
+  - 旧引用与署名保留
+status: suggested
+~~~
+
+候选不是已应用正文。**删除一段不等于已补回它承担的作用；移动段落不等于改写现实因果；改得更短不等于事实范围不变。**对高承载 U，应先写出它的多重功能与承接位置。
+
+## 3. 四种状态必须区分
+
+| 状态 | 意义 | 核验 |
+|---|---|---|
+| suggested | Agent 提出方案 | 提案本身可见 |
+| accepted | 作者明确选中方案 | 有作者选择的依据 |
+| applied | 当前正文已实际落实 | 核对版本与 diff |
+| verified | 完成所列检查 | 记录已查范围与结果 |
+
+可以额外标 rejected / superseded。**已接受不等于已应用，已应用不等于已验证。**模型声称“我检查过”并不自动构成独立验证。
+
+## 4. Preservation guards 与 regression
+
+每次改动，只检查受影响的关键方面，但不可忽略：
+1. 事实、数字、引用、来源和已核验/未核验边界；
+2. 已确认作者意图、非目标和不能改变的内容；
+3. C 的 scope、modality、attribution 与个人原创推论；
+4. 高承载 U 的表达作用（幽默、疑问、犹豫、语气、铺垫、限制）；
+5. R 的推理、前后引用、对话接力；
+6. **此前轮次已修复的问题**与用户已确认保留的区域。
+
+必要时读回全文；若只检查了受影响段落，就如实注明范围。无法核对的事项标 not_checked，不得冒充 verified。
+
+## 5. 三轮虚构例子
+
+~~~text
+v0：“所有参与者都更快。”
+第1轮：材料仅支持12人的一次试验 → v1：“这次12人试验中完成得更快。”
+第2轮：压缩开头 → 合格的 v2 仍保留“这次12人试验”的限定。
+第3轮：语言更有力量 → 合格的 v3 不改写为“彻底证明普遍有效”。
+~~~
+
+仅演示逻辑，不是实验。更完整的合成场景在 [CASES](../tests/CASES.md)。
+
+## 6. 停止条件
+
+没有高影响问题就明确保留当前稿；剩下都属于风格偏好时呈现得失供作者选择；没有新材料和真正问题时停止重复审稿，必要时转到真实读者阅读/试听。**局部任务不自动产生完整七原语表和全稿重写。**
+
+本协议仍是待验证方案。
