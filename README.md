@@ -26,7 +26,9 @@ Writing Primitives 不是写作的完整本体（ontology）、自动打分器�
 
 详见 [METHOD](references/METHOD.md) 与 [MIGRATION](references/MIGRATION.md)。
 
-## 2. 问题优先：默认工作闭环
+## 2. 写作先试写，审稿按问题展开
+
+默认只读 [SKILL.md](SKILL.md)。方向未定时从简短 Brief 和现有材料试写，局部任务直接改指定文字；只有具体困难需要时才加载表示、视图或参考文件。下面是审稿路线，不是创作前必须走完的流程。
 
 ```text
 作者约束 D + 当前真实版本 U
@@ -63,7 +65,7 @@ Writing Primitives 不是写作的完整本体（ontology）、自动打分器�
 - 七原语到 vNext：[references/MIGRATION.md](references/MIGRATION.md)
 - 过往用法的匿名经验：[references/USAGE_AND_LESSONS.md](references/USAGE_AND_LESSONS.md)
 - 经典与论文线索：[references/RESEARCH_SEEDS.md](references/RESEARCH_SEEDS.md)
-- **纯虚构**演示：[examples/SYNTHETIC_REVIEW.md](examples/SYNTHETIC_REVIEW.md) · [Voice Pass 对照](examples/voice/SYNTHETIC_VOICE_COMPARISONS.md)
+- **纯虚构**演示：[examples/SYNTHETIC_REVIEW.md](examples/SYNTHETIC_REVIEW.md) · [Voice Pass 对照](examples/voice/SYNTHETIC_VOICE_COMPARISONS.md) · [小范围试写与非教学片段](examples/SMALL_PROBE_AND_NARRATIVE.md)
 - 跨模型参考语料的**采集协议，暂无真实 Gemini 输出**：[examples/model-comparison/README.md](examples/model-comparison/README.md) · [三份统一任务](examples/model-comparison/BRIEFS.md)
 - 未运行的评测与案例：[tests/EVALUATION.md](tests/EVALUATION.md)、[tests/CASES.md](tests/CASES.md)、[tests/VOICE_CASES.md](tests/VOICE_CASES.md)
 - 研究任务：[RESEARCH_BRIEF.md](RESEARCH_BRIEF.md)
